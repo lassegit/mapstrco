@@ -1,0 +1,18 @@
+<?php
+
+class LikesTableSeeder extends Seeder {
+
+	public function run()
+	{
+		// Uncomment the below to wipe the table clean before populating
+		// DB::table('likes')->truncate();
+
+		$likes = array(
+
+		);
+
+		// Uncomment the below to run the seeder
+		// DB::table('likes')->insert($likes);
+	}
+
+}

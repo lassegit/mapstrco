@@ -1,0 +1,84 @@
+@import 'base';
+@import 'sprite/*.png';
+@include all-sprite-sprites;
+
+/**
+ * Hide all text for sprites
+ */
+.sprite-sprite {
+	text-indent: -9999px;
+	display: inline-block;
+}
+
+
+/**
+ * Like buttons
+ */
+.sprite-trackliked, .sprite-trackunliked {
+	height: 32px;
+	width: 32px;
+	vertical-align: middle;
+	&:hover {
+		@include opacity(0.8);
+	}
+}
+
+/**
+ * Comment like
+ */
+.sprite-commentunliked, .sprite-commentliked {
+	height: 20px;
+	width: 20px;
+	vertical-align: middle;
+	&:hover {
+		@include opacity(0.8);
+	}
+}
+
+/**
+ * Tracks
+ */
+.sprite-tracks, .sprite-comments, .sprite-likes {
+	height: 22px;
+	width: 22px;
+	vertical-align: middle;
+}
+
+/**
+ * User & compass
+ */
+.sprite-user, .sprite-compass, .sprite-star, .sprite-latecomment {
+	height: 16px;
+	width: 16px;
+	vertical-align: middle;
+}
+
+/**
+ * Social media icons
+ */
+.sprite-facebook,.sprite-googleplus,.sprite-linkedin,.sprite-reddit,.sprite-tumblr,.sprite-twitter, .sprite-share {
+	height: 32px;
+	width: 32px;
+}
+.sprite-share {
+	vertical-align: middle;
+}
+.sprite-link {
+	height: 20px;
+	width: 20px;
+}
+
+/**
+ * Sign in buttons
+ */
+.sprite-googlelogin, .sprite-fblogin,.sprite-googlelogingray, .sprite-fblogingray {
+	width: 200px;
+	vertical-align: middle;
+	height: 38px;
+}
+.sprite-googlelogin:hover {
+	@extend .sprite-googlelogingray;
+}
+.sprite-fblogin:hover {
+	@extend .sprite-fblogingray;
+}

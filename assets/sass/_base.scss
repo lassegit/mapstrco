@@ -1,0 +1,64 @@
+/**
+ * SCSS settings file.
+ */
+
+/**
+ * Font faces, stacks and sizes.
+ */
+$break:980px 12; // Mobile break point.
+
+/**
+ * Typography.
+ */
+$base-font-size:   16px; // The font size set on the root html element.
+$base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
+$heading-line-height: 1.4;
+
+$h1-font-size: 1.5  * $base-font-size;
+$h2-font-size: 1.35 * $base-font-size;
+$h3-font-size: 1.2  * $base-font-size;
+$h4-font-size: 1    * $base-font-size;
+
+$helvetica:       'Roboto', sans-serif;
+$base-font-family: $helvetica; // The font family set on the html element.
+$font-body:        $helvetica;
+$font-monospace:   $helvetica;
+
+$indent-amount:0;
+
+/**
+ * Colors.
+ */
+$green: #53d769;
+$blue:  #1c91f5;
+$dark-blue: #1876C7;
+$red:	#fc3e39;
+$orange:#ff771f;
+$yellow:#ffd425;
+$white: #ffffff;
+$purple: #da48d9;
+$gray:  #aeb0b3;
+$dark-gray: #9EA0A2;
+$light-gray: #e5e5e5;
+$dark: #3d3d3d;
+
+// Gray heart: #999999
+// Dark red: #ad2a27
+
+$body-bg: 	 $blue;
+$header-bg:  $dark;
+$content-bg: $white;
+$footer-bg:  $dark;
+$hover-link: darken($blue, 25%);
+
+$error-bg:  $red;
+$succes-bg: $green;
+
+/**
+ * Partials to be shared with all .scss files.
+ */
+@import "susy";
+@import "compass";
+@import "custom"; // Custom mixin and classes.
+@import "sassy-buttons"; // Sassy buttons
+

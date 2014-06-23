@@ -1,0 +1,485 @@
+@import 'base';
+
+/**
+ * Sidebar css.
+ */
+#sidebar {
+	padding:10px 1em 1em 1em;
+	overflow-y: scroll; 
+
+	h1 {
+		font-size: 1.3em;
+		line-height: 1.2em;
+		margin: 10px 0;
+	}
+
+	p {
+		margin:0 0 1em 0;
+	}
+
+	a {
+		font-weight: 700;
+	}
+}
+
+
+/**
+ * About sidebar
+ */
+#about-sidebar {
+	// display: none;
+
+	ol {
+		list-style: decimal;
+		margin:0 0 1em 1.5em;
+		li {
+			margin-bottom: 7px;
+		}
+	}
+
+	h2 {
+		margin:10px 0 10px 0;
+		font-size: 1.2em;
+		border-bottom: 5px solid $light-gray;
+
+	}
+
+	h1 {
+		margin:0 0 10px 0;
+	}
+
+	.sidebar-signup {
+		background: $light-gray;
+		padding: 10px 5px;
+		text-align: center;
+		margin:1.5em 0;
+		h2 {
+			margin: 0 0 10px 0;
+			line-height: 1;
+		}
+	}
+
+	.top-image {
+		display: block;
+		margin: -15px auto 5px auto;
+	}
+}
+
+span.blue {
+	color: $blue;
+}
+
+
+/**
+ * Css for tracks (scaling done by fitvids)
+ */
+.youtube-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+    background: $light-gray;
+}
+
+.youtube-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/**
+ * Sidebar tabs
+ */
+#sidebartabs {
+	position: absolute;
+	right: 0;
+	z-index: 1;
+	margin-top:10px;
+
+	.sidebartabs-link {
+		clear: both;
+		display: block;
+		background: $white;
+		color: #000;
+		margin-bottom: 1em;
+		line-height: 26px;
+		padding: 3px 8px;
+		@include box-shadow(0 1px 7px rgba(0, 0, 0, 0.65));
+		text-decoration: none;
+
+		&:hover {
+			background: $light-gray;
+		}
+	}
+	.active {
+		background: $light-gray;
+	}
+}
+
+
+/**
+ * Tracks CSS
+ */
+#commentsform, #comment-likes-selector, #commentsroll, #likesroll {
+	margin-top: 1em;
+	clear: both;
+	@include clearfix;
+}
+
+#commentsform textarea {
+	margin-bottom: 10px;
+}
+
+#comment-likes-selector {
+	border:1px solid $light-gray;
+	color: $gray;
+	line-height: 28px;
+	font-size: 0.9em;
+
+	.span-buttons {
+		width: 50%;
+		text-align: center;
+		float: left;
+		display: block;
+		cursor: pointer;
+		&:hover {
+			background: $light-gray;
+		}
+	}
+
+	.active {
+		background: $light-gray;
+	}
+
+	.sprite-comments, .sprite-likes {
+		margin-right: 2px;
+	}
+}
+
+/**
+ * Frontpage top box
+ */
+#sidebar h1.frontpage-box {
+	margin:0 0 10px 0;
+	padding: 5px;
+	background: $light-gray;
+}
+
+/**
+ * Track author
+ */
+.author {
+	margin-bottom: 10px;
+
+	#edit-track {
+		color: $gray;
+		&:hover {
+			color: $dark-blue;
+		}
+	}
+}
+
+.country {
+	text-transform: capitalize;
+}
+
+/**
+ * Comments CSS
+ */
+#commentsroll {
+	.comment {
+		border-top:1px solid $light-gray;
+		margin-bottom: 1.5em;
+	}
+
+	.comment-author {
+		margin:0 0 0.5em 0;
+		color: $gray;
+	}
+
+	.comment-body {
+		margin:0 0 0.5em 0;
+	}
+}
+.comment-listing-meta {
+	color:$dark-gray;
+	.sprite-likes {
+		margin-right: 2px;
+	}
+}
+
+/**
+ * Likes CSS
+ */
+#likesroll {
+	display: none;
+}
+
+.tracklike, .comment-like {
+	color: $dark-gray;
+	a {
+		text-decoration: none;
+	}
+}
+.tracklike {
+	font-size: 18px;
+}
+
+/**
+ * User profile
+ */
+#sidebar h1.user-title {
+	margin: 5px 0 0 0;
+	font-size: 1.5em;
+}
+span.user-tag {
+	color: $gray;
+	font-weight: 700;
+}
+
+.user-meta {
+	color: $gray;
+	margin:5px 0 1em 0;
+	font-size: 14px;
+	a {
+		color: $gray;
+		&:hover {
+			color:$dark-blue;
+		}
+	}
+}
+
+#sidebar .user-info {
+	margin:5px 0 0 0;
+}
+
+#sidebar .user-body p {
+	margin:5px 0;
+}
+#commentsroll .item {
+	font-size: 1em;
+}
+.item {
+	display: block;
+	@include clearfix;
+	margin:0 0 0.8em 0;
+	padding-left:5px;
+	font-size: 15px;
+	// height: 70px;
+
+	&:hover {
+		background: $light-gray;
+	}
+
+	.thumbwrapper {
+		float: right;
+		display: block;
+		max-height: 80px;
+		overflow: hidden;
+		margin-top: -10px; 
+	}
+
+	.youtubethumb {
+		float: right;
+		margin-left: 8px;
+		max-width: 120px;
+		max-height: 90px;
+	}
+
+	h2 {
+		margin:0;
+		font-size: 18px;
+		line-height: normal;
+		
+		.text-cutter {
+			max-height: 47px;
+			overflow: hidden;
+			display: block;
+			line-height: 22px;
+		}
+		.tracklink {
+			color: #000;
+			display: block;
+			text-decoration: none;
+		}
+	}
+	.tracknumber {
+		font-weight: 700;
+	}
+
+	.tracknumber, .genre {
+		font-size: 15px;
+		font-weight: 700;
+	}
+
+	.item-meta {
+		color: $gray;
+	}
+}
+
+#user-likes-selector {
+	border: 1px solid $light-gray;
+	@include clearfix;
+	margin-bottom: 1em;
+	line-height: 28px;
+	font-size: 0.9em;
+	color: $gray;
+
+	.span-tabs {
+		width: 33.3333%;
+		display: block;
+		float: left;
+		text-align: center;
+		cursor: pointer;
+
+		&:hover {
+			background: $light-gray;
+		}
+	}
+	.span-tabs.active {
+		background: $light-gray;
+	}
+
+	.sprite-tracks, .sprite-comments, .sprite-likes {
+		margin-right: 2px;
+	}
+
+	.share-link {
+		margin-top: -5px;
+	}
+}
+
+/**
+ * Social share tool tips
+ */
+.share-links {
+	text-align: center;
+	background: $light-gray;
+	padding: 7px 0;
+	margin-top: 10px;
+	display: none;
+
+	.tooltip {
+		display: inline;
+		position: relative;
+		font-size: 12px;
+		text-align: center;
+		@include opacity(0.95);
+	}
+
+	.tooltip:hover:after{
+		background: $dark;
+		bottom: 26px;
+		color: #fff;
+		content: attr(tooltiptitle);
+		left: -50px;
+		padding: 0;
+		position: absolute;
+		z-index: 500;
+		width: 125px;
+		@include box-shadow(0 0 7px 0 $gray);
+	}
+
+	.tooltip:hover:before{
+		border: solid;
+		border-color: $dark transparent;
+		border-width: 6px 6px 0 6px;
+		bottom: 20px;
+		content: "";
+		left: 10px;
+		position: absolute;
+		z-index: 501;
+	}
+
+	/**
+	 * Direct link
+	 */
+	.share-direct-link {
+		position: relative;
+		width: 80%;
+		margin:10px auto 0 auto;
+		.sprite-link {
+			position: absolute;
+			right: 5px;
+			top:6px;
+			@include opacity(0.4);
+		}
+	}
+
+	.direct-link-input {
+		height: 30px;
+		line-height: 30px;
+		margin:0;
+		text-align: center;
+	}
+}
+
+/**
+ * The share link
+ */
+.sprite-share:hover {
+	@include opacity(0.8);
+}
+.tracklike .share-link {
+	float: right;
+	margin-top: -2px;
+}
+
+.user-meta .share-link {
+	float: right;
+	margin-top: -5px;
+}
+
+
+/**
+ * Hottest genre
+ */
+#genre-sidebar {
+	h1 {
+		margin:5px 0 0 0;
+	}
+
+	h2.genre-title {
+		margin:20px 0 8px 0;
+		padding:0;
+		border-bottom: 6px solid $light-gray;
+		font-weight: normal;
+	}
+
+	b {
+		text-transform: uppercase;
+	}
+	
+	.genre {
+		color: $gray;
+	}
+
+	.show-more-genre {
+		margin-top: 5px;
+		display: block;
+		text-align: center;
+		border-top: 3px solid $light-gray;
+		color: $blue;
+		cursor: pointer;
+		&:hover {
+			color: #000;
+			border-top-color:$blue;
+		}
+	}
+
+	.genre-wrapper {
+		max-height: 303px;
+		overflow: hidden;
+	}
+}
+
+/**
+ * Hot sidebar
+ */
+#hot-sidebar {
+	h1 {
+		margin: 5px 0 0 0;
+	}
+}

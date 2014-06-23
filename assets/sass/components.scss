@@ -1,0 +1,242 @@
+@import 'base';
+
+/**
+ * Loading div
+ */
+.loading {
+	text-align: center;
+	margin:auto;
+	float: none;
+	display: block;
+	img {
+		height: 30px;
+	}
+}
+
+/**
+ * Error messages
+ */
+#sidebar .error-message, .leaflet-popup-content .error-message, .user-error, .track-error  {
+	background: darken($red, 15%);
+	text-align: center;
+
+	p {
+		color: $white;
+		margin:7px 0 !important;
+		font-size: 0.9em;
+		font-weight: 700;
+	}
+}
+
+#signups .error-message {
+	background: darken($red, 15%);
+
+	p {
+		color: $white;
+		margin:0 0 5px 0;
+		font-size: 0.85em;
+		font-weight: 700;
+		padding:3px 10px;
+		line-height: normal;
+	}
+}
+
+/**
+ * Popups
+ */
+.leaflet-popup-content #popup-preview {
+	display: none;
+}
+#popup-preview {
+	background: $light-gray;
+	@include clearfix;
+	clear: both;
+	margin:1em 0;
+	padding: 5px;
+
+	.preview-thumb {
+		width: 50px;
+		float: right;
+	}
+
+	p {
+		font-size: 16px;
+		margin:0;
+		line-height: normal;
+		font-weight: 700;
+	}
+}
+
+
+/**
+ * Sidebar compass
+ */
+#compass-link, #latest-tracks, #latest-comments {
+	position: absolute;
+	margin-left: 10px;
+	background: $white;
+	padding:5px 0;
+	height: 16px;
+	width: 26px;
+	@include box-shadow(0 1px 7px rgba(0, 0, 0, 0.65));
+
+	&:hover {
+		background: $light-gray;
+	}
+
+	.sprite-compass, .sprite-star, .sprite-latecomment {
+		display: block;
+		margin:0 auto;
+	}
+}
+
+#compass-link.active, #latest-tracks.active, #latest-comments.active {
+	background: $light-gray;
+}
+
+#compass-link {
+	top: 75px;
+}
+
+#latest-tracks {
+	top:110px;
+}
+
+#latest-comments {
+	top:145px;
+}
+
+
+/**
+ * Region selector link
+ */
+#region-selector, #latest-tracks-selector, #latest-comments-selector {
+	background: $white;
+	position: absolute;
+	left: 50px;
+	display: none;
+	@include box-shadow(0 1px 7px rgba(0, 0, 0, 0.65));
+}
+
+#region-selector {
+	top: 75px;
+	a {
+		display: block;
+		color: #000;
+		text-decoration: none;
+		padding:2px 5px;
+		&:hover {
+			background: $light-gray;
+		}
+	}
+}
+
+#latest-tracks-selector, #latest-comments-selector {
+	h4 {
+		display: inline-block;
+		margin:5px 10px 0 0;
+		line-height: normal;
+		border-bottom: 4px solid $light-gray;
+	}
+
+	.loading {
+		display: inline;
+		color: $gray;
+		font-size: 12px;
+		img {
+			height: 16px;
+			vertical-align: middle;
+		}
+	}
+
+	.inner-selector {
+		overflow-y: scroll; 
+		height: 300px;
+		padding:0 5px;
+	}
+}
+
+#latest-tracks-selector {
+	top: 110px;
+	width: 400px;
+
+	#latest-tracks-content {
+		@include clearfix;
+		margin-top: 8px;
+	}
+
+	.item {
+		color: $gray;
+	}
+}
+
+#latest-comments-selector {
+	top: 145px;
+	width: 400px;
+
+	#latest-comments-content {
+		@include clearfix;
+		margin-top: 8px;
+	}
+
+	.sidebar-comment {
+		margin: 0 1px 3px 0;
+		line-height: 20px;
+	}
+
+	.item .tracklink {
+		color: #000;
+	}
+
+	.item {
+		height: auto;
+		color: $gray;
+	}
+}
+
+.compass-arrow {
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 6px 10.4px 6px 0;
+	border-color: transparent #ffffff transparent transparent;
+	position: absolute;
+	top: 7px;
+	left: -10px;
+}
+
+/**
+ * Save buttons
+ */
+.btn {
+	@include sassy-button-gradient("simple", $green);
+	padding:2px 15px;
+	clear: both;
+	display: block;
+	font-weight: 700;
+}
+
+/**
+ * Initial progress bar
+ */
+#progress {
+    position: absolute;
+    z-index: 1000;
+    left: auto;
+    top: auto;
+    width: 250px;
+    height: 10px;
+    margin-top: -20px;
+    margin-left: -100px;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2px;
+}
+
+#progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: $blue;
+}
+
+

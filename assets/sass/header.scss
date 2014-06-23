@@ -1,0 +1,173 @@
+@import 'base';
+
+/**
+ * Controls
+ */
+#controls {
+	margin-top:10px;
+	z-index: 1;
+	position: absolute;
+	left: 60px;
+
+	/**
+	 * Add song button
+	 */
+	.menu-buttons {
+		line-height: 26px;
+		@include box-shadow(0 1px 7px rgba(0, 0, 0, 0.65));
+		color: #000;
+		text-decoration: none;
+		margin-right: 15px;
+		display: inline-block;
+		background: $white;
+
+		&:hover {
+			background: $light-gray;
+		}
+
+		img {
+			vertical-align: middle;
+			display: inline-block;
+			height: 16px;
+			margin-bottom: 3px;
+		}
+	}
+
+	.active {
+		background: $light-gray;
+	}
+
+	a {
+		background: $white;
+		outline: 0;
+		padding: 0 8px;
+		display: block;
+	}
+
+	.social-login {
+		padding: 0;
+		margin-top: 1em;
+	}
+
+	.sprite-user {
+		margin-bottom: 3px;
+	}
+}
+
+
+/**
+ * Add song cursor
+ */
+.add-song-cursor {
+	cursor: crosshair !important;
+	// cursor:url('/img/add-cursor.png'), auto !important;
+}
+
+/**
+ * Drop down control hepl
+ */
+.control-addition {
+	background: $white;
+	padding: 0.3em 1em;
+	position: absolute;
+	@include box-shadow(0 1px 7px rgba(0, 0, 0, 0.65));
+	margin-top: 16px;
+
+	ul {
+		display: inline-block;
+		list-style: decimal;
+		margin-left: 1em;
+	}
+}
+
+a#add-song {
+	width: 183px;
+	white-space:nowrap;
+}
+#add-song-help {
+	font-size: 13px;
+	width: 175px;
+	display: none;
+	left: 0;
+	white-space: normal;
+	.arrow-up {
+		left: 85px;
+	}
+	ul {
+		line-height: normal;
+	}
+}
+
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid $white;
+	position: absolute;
+	top: -10px;
+}
+
+/**
+ * Sign up forms
+ */
+#signups {
+	width: 200px;
+	right: -20px;
+	padding: 0.8em;
+	display: none;
+	.arrow-up {
+		right: 105px;
+	}
+}
+.signup-tabs {
+	width: 50%;
+	text-align: center;
+	display: inline-block;
+	float: left;
+	cursor: pointer;
+	&:hover {
+		background: $light-gray;
+	}
+}
+
+#signupform, #signinform {
+	@include clearfix;
+	padding-top: 0.5em;
+	display: block;
+	clear: both;
+}
+#signinform {
+	display: none;
+}
+
+/**
+ * User control panel
+ */
+#usercontrol {
+	a {
+		color: #000;
+		text-decoration: none;
+		&:hover { background: $light-gray; }
+	}
+}
+
+/**
+ * Master count
+ */
+#total-tracks {
+	position: absolute;
+	bottom: 0;
+	left:0;
+	font-size: 11px;
+	background:rgba(255, 255, 255, 0.7);
+	line-height: normal;
+	padding: 0 5px;
+	a {
+		color: $dark;
+		&:hover {
+			color: $blue;
+		}
+	}
+}
+

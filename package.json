@@ -1,0 +1,21 @@
+{
+  "name": "laravel-grunt-workflow",
+  "description": "Custom workflow for rute.me",
+  "version": "0.0.1",
+  "private": true,
+  "author": {
+    "name": "Lasse",
+    "role": "Developer"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-compress": "~0.5.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-cssmin": "~0.6.1",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-phpunit": "~0.3.0"
+  }
+}
