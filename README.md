@@ -10,3 +10,5 @@
 - Front-end files all managed with gruntJS and Sass. Images all *sprited*. Front-end files located in assets/ folder.
 - Youtube api integration for generating video thumbnail and initial title
 - Leaflet markercluster to manage growing number of tracks with various sorting methods, i.e. "Hot" and "Genre" links all done front-end
+
+[Live demo can be seen  here.](http://mapstr.co)
